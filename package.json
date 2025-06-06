@@ -1,0 +1,23 @@
+{
+  "name": "livestreaming",
+  "version": "1.0.0",
+  "description": "landing page",
+  "homepage": "https://github.com/RafaelTagiev/landing_live_streaming#readme",
+  "bugs": {
+    "url": "https://github.com/RafaelTagiev/landing_live_streaming/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelTagiev/landing_live_streaming.git"
+  },
+  "license": "ISC",
+  "author": "Rafael Tagiev",
+  "type": "commonjs",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "devDependencies": {
+    "sass": "^1.89.1"
+  }
+}
