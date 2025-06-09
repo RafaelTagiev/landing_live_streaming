@@ -6,6 +6,12 @@
     }
 }
 
+%hover-white {
+    &:hover {
+        color: v.$color-white;
+    }
+}
+
 %hover-black-icon {
     &:hover {
         stroke: v.$color-black;
