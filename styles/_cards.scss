@@ -71,6 +71,7 @@
     border-radius: 20px;
     background-color: color.adjust(v.$color-white, $alpha: -0.9);
     overflow: hidden;
+    transition: all .3s;
 
     @include m.d-flex(center, center, nowrap, column);
 
@@ -96,6 +97,7 @@
         height: 95px;
         background-color: v.$color-white;
         rotate: 7deg;
+        transition: all .3s;
 
         & svg {
             rotate: -7deg;
