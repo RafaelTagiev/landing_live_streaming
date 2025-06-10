@@ -63,3 +63,52 @@
         }
     }
 }
+
+.experienc-card {
+    position: relative;
+    width: 322px;
+    height: 295px;
+    border-radius: 20px;
+    background-color: color.adjust(v.$color-white, $alpha: -0.9);
+    overflow: hidden;
+
+    @include m.d-flex(center, center, nowrap, column);
+
+    &__title {
+        @include m.font(23px, 400, v.$color-white);
+        @include m.d-flex(center, center, nowrap, column);
+
+        max-width: 280px;
+        text-align: center;
+        height: 80px;
+    }
+
+    &__img {
+        width: 323px;
+        height: 215px;
+    }
+
+    &__arrow {
+        @include m.pos(absolute, 1, -1, bottom, left, -25px, -75px);
+
+        border-radius: 20px;
+        width: 165px;
+        height: 95px;
+        background-color: v.$color-white;
+        rotate: 7deg;
+
+        & svg {
+            rotate: -7deg;
+            @include m.pos(absolute, 1, -1, top, right, 25px, 32px);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 50px 10px #5873b6;
+        background-color: #5873b6;
+
+        .experienc-card__arrow {
+            transform: scale(1.5);
+        }
+    }
+}
