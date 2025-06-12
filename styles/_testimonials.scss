@@ -1,0 +1,164 @@
+@use "variabels" as v;
+@use "mixins" as m;
+@use "sass:color";
+
+
+.testimonials-section {
+    padding-top: 300px;
+
+    .testimonials {
+        @include m.d-flex(center, center, nowrap, column);
+
+        &__title {
+            margin-bottom: 90px;
+
+            @include m.font(60px, 400, v.$color-white);
+
+            @media (max-width: v.$media_md) {
+                margin-bottom: 60px;
+
+                @include m.font(35px, 400, v.$color-white);
+            }
+        }
+
+        &__slider {
+            width: 100%;
+            overflow: hidden;
+
+            .testimonials__slide {
+                @include m.d-flex(center, center, nowrap, column);
+                opacity: 0.5;
+                transform: scale(0.75);
+                transition: all .3s;
+                padding: 0 300px;
+
+                @media (max-width: 1250px) {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .slick-center {
+                opacity: 1;
+                transform: scale(1);
+                transition: all .3s;
+            }
+
+            .slick-list {
+                margin: 0 -300px;
+            }
+        }
+
+        &__arrows {
+            position: relative;
+
+            .testimonials__arrow {
+                display: inline-block;
+                width: 66px;
+                height: 66px;
+                border-radius: 20px;
+                background: color.adjust(v.$color-white, $alpha: -0.9);
+                rotate: 45deg;
+                transition: all .3s;
+
+                &-prev {
+                    @include m.pos(absolute, 1, -1, top, right, -160px, 360px);
+
+                    &::before {
+                        content: "";
+                        width: 36px;
+                        height: 23px;
+                        @include m.pos(absolute, 1, -1, top, left, 19px, 17px);
+                        background: url(../assets/icons/arrow-icon-white.svg);
+                        rotate: 135deg;
+
+                        @media (max-width: v.$media_md) {
+                            @include m.pos(absolute, 1, -1, top, left, 13px, 9px);
+                        }
+                    }
+
+                    @media (max-width: v.$media_lg) {
+                        @include m.pos(absolute, 1, -1, top, right, 70px, 160px);
+                    }
+
+                    @media (max-width: v.$media_md) {
+                        width: 50px;
+                        height: 50px;
+
+                        @include m.pos(absolute, 1, -1, top, right, 30px, 90px);
+                    }
+                }
+
+                &-next {
+                    @include m.pos(absolute, 1, -1, top, left, -160px, 360px);
+
+                    &::before {
+                        content: "";
+                        width: 36px;
+                        height: 23px;
+                        background: url(../assets/icons/arrow-icon-white.svg);
+                        rotate: 315deg;
+
+                        @include m.pos(absolute, 1, -1, top, left, 19px, 17px);
+
+                        @media (max-width: v.$media_md) {
+                            @include m.pos(absolute, 1, -1, top, left, 13px, 9px);
+                        }
+                    }
+
+                    @media (max-width: v.$media_lg) {
+                        @include m.pos(absolute, 1, -1, top, left, 70px, 160px);
+                    }
+
+                    @media (max-width: v.$media_md) {
+                        width: 50px;
+                        height: 50px;
+
+                        @include m.pos(absolute, 1, -1, top, left, 30px, 90px);
+                    }
+                }
+
+                &:hover {
+                    scale: 1.5;
+                }
+            }
+        }
+
+        &__dots {
+            margin: 200px 0 100px;
+
+            .slick-dots {
+                @include m.d-flex(center, center, nowrap, row, 10px, 0);
+
+                & li {
+                    cursor: pointer;
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 100%;
+                    background-color: v.$color-white;
+
+                    & button {
+                        font-size: 0;
+                        width: 13px;
+                        height: 13px;
+                        color: transparent;
+                        background-color: transparent;
+                    }
+                }
+
+                .slick-active {
+                    scale: 0.8;
+                    background-color: v.$color-gray;
+                }
+            }
+
+            @media (max-width: v.$media_lg) {
+                margin: 100px 0;
+            }
+
+            @media (max-width: v.$media_md) {
+                margin: 50px 0 100px;
+            }
+        }
+    }
+}
