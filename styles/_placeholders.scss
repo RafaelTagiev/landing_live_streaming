@@ -13,7 +13,7 @@
 }
 
 %hover-black-icon {
-    &:hover {
-        stroke: v.$color-black;
+    &:hover path{
+        fill: v.$color-black;
     }
 }
