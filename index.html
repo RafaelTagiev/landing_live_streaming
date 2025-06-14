@@ -44,6 +44,47 @@
             </nav>
         </div>
     </header>
+    <div class="mobile-navigation">
+        <label for="checkboxID" class="mobile-navigation__burger">
+            <svg class="mobile-navigation__burger-icon" width="27" height="22" viewBox="0 0 27 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="27" height="2" fill="white" />
+                <rect y="10" width="27" height="2" fill="white" />
+                <rect y="20" width="27" height="2" fill="white" />
+            </svg>
+        </label>
+        <input id="checkboxID" type="checkbox" class="mobile-navigation__toggler">
+        <nav class="mobile-navigation__menu nav">
+            <ul class="nav__list">
+                <li class="nav__list-item">
+                    <a href="#work" class="nav__list-item-link">How we work</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#about" class="nav__list-item-link">About</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#experienc" class="nav__list-item-link">Our experience </a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#testimonials" class="nav__list-item-link">Testimonials</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#form" class="nav__list-item-link">Form</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#footer" class="nav__list-item-link">Contact</a>
+                </li>
+            </ul>
+            <label for="checkboxID" class="nav__close">
+                <svg class="nav__close-icon" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.246948" y="19.8388" width="27" height="2" transform="rotate(-45 0.246948 19.8388)"
+                        fill="white" />
+                    <rect x="1.66101" y="0.746948" width="27" height="2" transform="rotate(45 1.66101 0.746948)"
+                        fill="white" />
+                </svg>
+            </label>
+        </nav>
+    </div>
     <main class="main">
         <section class="hero-section">
             <div class="container">
@@ -66,7 +107,7 @@
                 </div>
             </div>
         </section>
-        <section class="work-section">
+        <section class="work-section" id="work">
             <div class="container">
                 <div class="work">
                     <h2 class="work__title">How we work</h2>
@@ -173,7 +214,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="container">
                 <div class="about">
                     <div class="about__quality">
@@ -201,7 +242,7 @@
                 </div>
             </div>
         </section>
-        <section class="experienc-section">
+        <section class="experienc-section" id="experienc">
             <div class="container">
                 <div class="experienc">
                     <h2 class="experienc__title">Our experience</h2>
@@ -246,7 +287,7 @@
                 </div>
             </div>
         </section>
-        <section class="testimonials-section">
+        <section class="testimonials-section" id="testimonials">
             <div class="container">
                 <div class="testimonials">
                     <h2 class="testimonials__title">Testimonials</h2>
@@ -320,7 +361,7 @@
                 </div>
             </div>
         </section>
-        <section class="form-section">
+        <section class="form-section" id="form">
             <div class="container">
                 <div class="form-section__wrapper">
                     <form action="mailto:" class="form">
@@ -340,7 +381,7 @@
             <div class="form-section__bg-cloud cloud--right"></div>
         </section>
     </main>
-    <footer class="footer-section">
+    <footer class="footer-section" id="footer">
         <div class="container">
             <div class="footer">
                 <div class="footer__terms">
@@ -364,14 +405,16 @@
                         </svg>
                     </a>
                     <a class="footer__contacts-icon" href="#" target="_blank">
-                        <svg class="footer__contacts-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="footer__contacts-icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M21.632 0H3.36981C1.50931 0 0.00100708 1.42445 0.00100708 3.18164V20.4293C0.00100708 22.1865 1.50925 23.611 3.36981 23.611H12.3766L12.392 15.1737H10.071C9.7694 15.1737 9.52459 14.9434 9.52343 14.6585L9.5123 11.9388C9.51113 11.6524 9.75668 11.4196 10.06 11.4196H12.3767V8.7917C12.3767 5.74203 14.3488 4.08147 17.2293 4.08147H19.593C19.8954 4.08147 20.1407 4.31302 20.1407 4.5987V6.89195C20.1407 7.17751 19.8956 7.40901 19.5933 7.40919L18.1427 7.40982C16.5762 7.40982 16.2729 8.11286 16.2729 9.14461V11.4197H19.7151C20.0431 11.4197 20.2975 11.6902 20.2589 11.9978L19.9176 14.7175C19.8849 14.9777 19.6512 15.1738 19.3738 15.1738H16.2882L16.2729 23.6111H21.6321C23.4926 23.6111 25.0008 22.1867 25.0008 20.4295V3.18164C25.0008 1.42445 23.4925 0 21.632 0Z"
                                 fill="white" />
                         </svg>
                     </a>
                     <a class="footer__contacts-icon" href="#" target="_blank">
-                        <svg class="footer__contacts-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="footer__contacts-icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M21.3379 0H3.66211C1.64299 0 0 1.55171 0 3.45866V20.1525C0 22.0594 1.64299 23.6111 3.66211 23.6111H21.3379C23.357 23.6111 25 22.0594 25 20.1525V3.45866C25 1.55171 23.357 0 21.3379 0ZM12.5488 17.985C8.91399 17.985 5.95703 15.1923 5.95703 11.7594C5.95703 8.32654 8.91399 5.53385 12.5488 5.53385C16.1837 5.53385 19.1406 8.32654 19.1406 11.7594C19.1406 15.1923 16.1837 17.985 12.5488 17.985ZM19.873 6.91732C18.6615 6.91732 17.6758 5.98636 17.6758 4.84212C17.6758 3.69788 18.6615 2.76693 19.873 2.76693C21.0846 2.76693 22.0703 3.69788 22.0703 4.84212C22.0703 5.98636 21.0846 6.91732 19.873 6.91732Z"
                                 fill="white" />
