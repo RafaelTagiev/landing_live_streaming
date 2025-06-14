@@ -15,7 +15,7 @@
   "type": "commonjs",
   "source": "index.html",
   "scripts": {
-    "sass:watch": "sass --style=expanded --watch styles:dist"
+    "sass:watch": "sass --style=compressed --watch styles:dist"
   },
   "devDependencies": {
     "sass": "^1.89.1"
