@@ -98,7 +98,7 @@
         .globe {
             width: 90px;
 
-            @include m.d-flex(center,center);
+            @include m.d-flex(center, center);
 
             &__link {
 
@@ -111,5 +111,76 @@
                 }
             }
         }
+
+        @media (max-width: v.$media_md) {
+            
+            &__links,
+            .covid,
+            .globe {
+                display: none;
+            }
+        }
+    }
+}
+
+.mobile-navigation {
+    display: none;
+
+    &__burger {
+        cursor: pointer;
+
+        rect {
+            transition: all .3s;
+        }
+
+        @include m.pos(fixed, 10, -1, top, right, 13px, 20px);
+        @extend %hover-black-icon;
+    }
+
+    &__toggler {
+        display: none;
+
+        &:checked + .nav {
+            translate: 0;
+        }
+    }
+
+    .nav {
+        background: color.adjust(v.$color-black, $alpha: -0.5);
+        backdrop-filter: blur(10px);
+        translate: 100% 0;
+        transition: all .3s;
+        padding: 100px 70px 0;
+
+        @include m.pos(fixed, 999, 0);
+
+        &__list {
+            @include m.d-flex(start, start, nowrap, column, 0, 20px);
+
+            &-item {
+
+                &-link {
+                    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+
+                    @include m.font(36px, 400, v.$color-white);
+                }
+            }
+        }
+
+        &__close {
+            cursor: pointer;
+    
+            rect {
+                transition: all .3s;
+            }
+    
+            @include m.pos(absolute, 10, -1, top, right, 13px, 20px);
+            @extend %hover-black-icon;
+        }
+    }
+
+
+    @media (max-width: v.$media_md) {
+        display: block;
     }
 }
